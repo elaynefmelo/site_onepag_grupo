@@ -1,0 +1,183 @@
+//Importação Google Fonts
+@import url('https://fonts.googleapis.com/css2?family= Sofia+Sans & display = swap');
+
+//Cores
+$black: #000000;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 1em;
+}
+
+//Layout
+.container{
+    margin: 0 auto;
+}
+.Flex{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Botao{
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1.3em;
+    font-weight: 500;
+    background-color: $black;
+    padding: 10px 40px;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+
+//Smartphone Portrait
+//Cabeçalho
+header{
+    height: 90px;
+    background-color: #FFFFFF;
+    ;
+}
+#logo{
+    img{
+        width: 200px;
+    }
+}
+
+#check{
+    display: none;
+}
+
+label{
+    font-size: 3em;
+    position: fixed;
+    right: 15px;
+    top: 5px;
+    color: rgba(0, 0, 0, 0.5);
+}
+nav{
+    ul{
+        list-style: none;
+        background-color: #343538;
+        height: 100vh;
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        transition: all 0.5s;
+        li{
+            padding: 20px;
+            border-bottom: 1px solid #a9a9a9;
+            a{
+                text-decoration: none;
+                color: #ffff;
+            }
+        }
+    }
+}
+#check:checked ~ ul{
+    right: 0;
+}
+
+//Destaque
+main{
+    height: 70vh;
+    background: url(../img/banneropc.jpg);
+    background-size: cover;
+    background-position: center;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    h1{
+        font-size: 2.5em;
+    }
+    h2{
+        font-size: 1em;
+        margin: 20px 0px 50px 0px;
+    }
+}
+
+// Smartphone Landscape
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+    main h1, main h2{
+        text-shadow: #4d4c4c 0.05em 0.05em 0.05em;
+    }
+}
+
+// Tablet Portrait
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+    //Destaque
+    main{
+        height: 45vh;
+        h1{
+            font-size: 5.5em;
+        }
+        h2{
+            font-size: 2em;
+        }
+    }
+    
+}
+
+//Tablet Landscape
+@media (min-width: 992px){
+    .container{
+        max-width: 1140px;
+    }
+    header{
+        height: 140px;
+    }
+
+    #logo{
+        img{
+            width: 250px;
+            margin-top: 25px;
+        }
+    }
+    label{
+        display: none;
+    }
+    nav{
+        ul{
+            position: static;
+            height: auto;
+            background-color: transparent;
+            margin-top: 45px;
+            li{
+                float: left;
+                border: 0;
+                font-size: 20px;
+                a{
+                    color: #343538;
+                }
+                a:hover{
+                    color: aqua;
+                }
+            }
+        }
+    }
+    main{
+        height: 70vh;
+    }
+}
+
+//Desktop
+@media (min-width: 1200px){
+
+}
