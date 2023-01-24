@@ -96,6 +96,47 @@ main h2 {
   margin: 20px 0px 50px 0px;
 }
 
+#sobre {
+  height: 40vh;
+  padding: 50px 0px;
+  background: url(../img/fundo\ mobile.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#destaqueSobre {
+  display: none;
+}
+
+#textoSobre {
+  color: white;
+  padding: 0px 10px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+#textoSobre h2 {
+  margin-bottom: 10px;
+}
+#textoSobre p {
+  margin-top: 20px;
+}
+
+#conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Card {
+  flex-direction: column;
+}
+.Card img {
+  width: 150px;
+  height: 250px;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -116,6 +157,16 @@ main h2 {
   }
   main h2 {
     font-size: 2em;
+  }
+  #textoSobre {
+    margin-top: 80px;
+  }
+  #textoSobre h2 {
+    font-size: 2em;
+  }
+  #textoSobre p {
+    margin-top: 40px;
+    font-size: 1.5em;
   }
 }
 @media (min-width: 992px) {
@@ -151,5 +202,15 @@ main h2 {
   }
   main {
     height: 70vh;
+  }
+  #sobre {
+    background-attachment: fixed;
+  }
+  #destaqueSobre {
+    display: inline;
+  }
+  #destaqueSobre img {
+    border-radius: 50%;
+    margin-right: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
